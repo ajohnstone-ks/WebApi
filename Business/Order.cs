@@ -13,7 +13,7 @@ namespace Business {
 		}
 
 		[Create, RunLocal]
-		private void Create([Inject] IOrderChildFactory childFactory) => Lines = childFactory.CreateLines();
+		private void Create(int customerId, [Inject] IOrderChildFactory childFactory) => Lines = childFactory.CreateLines();
 
 	}
 }

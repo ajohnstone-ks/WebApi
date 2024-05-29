@@ -43,8 +43,6 @@ namespace WebApplication1
 
 			serviceProvider = container.BuildServiceProvider(services);
 
-			var user = serviceProvider.GetRequiredService<ICurrentUser>();
-
 			AreaRegistration.RegisterAllAreas();
 			GlobalConfiguration.Configure(x => WebApiConfig.Register(x, serviceProvider));
 
